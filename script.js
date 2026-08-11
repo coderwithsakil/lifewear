@@ -45,7 +45,7 @@ function sendOrder() {
         "Size: " + size + "\n" +
         "Address: " + address;
 
-    let whatsappNumber = "881733697137";
+    let whatsappNumber = "8801733697137";
 
     let whatsappURL =
         "https://wa.me/" +
