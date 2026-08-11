@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LifeWear | Premium T-Shirts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            LIFEWEAR
+        </div>
+
+        <div class="menu">
+            <a href="#shop">SHOP</a>
+            <a href="#collection">COLLECTIONS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <div class="icons">
+            🛒
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p>NEW COLLECTION</p>
+
+            <h1>WEAR YOUR<br>LIFESTYLE</h1>
+
+            <button onclick="scrollToShop()">
+                SHOP NOW
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SHOP -->
+    <section id="shop" class="shop">
+
+        <p class="small-title">LIFEWEAR COLLECTION</p>
+
+        <h2>Featured T-Shirts</h2>
+
+        <div class="products">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/Allan walker.png"
+                         alt="Classic Black T-Shirt">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Classic Black T-Shirt</h3>
+
+                    <p>৳499.00</p>
+
+                    <button onclick="orderNow('Classic Black T-Shirt')">
+                        ORDER NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/Allan walker.png"
+                         alt="Clean White T-Shirt">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Clean White T-Shirt</h3>
+
+                    <p>৳499.00</p>
+
+                    <button onclick="orderNow('Clean White T-Shirt')">
+                        ORDER NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/Allan walker.png"
+                         alt="LifeWear Premium T-Shirt">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>LifeWear Premium T-Shirt</h3>
+
+                    <p>৳599.00</p>
+
+                    <button onclick="orderNow('LifeWear Premium T-Shirt')">
+                        ORDER NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/Allan walker.png"
+                         alt="Essential Black T-Shirt">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Essential Black T-Shirt</h3>
+
+                    <p>৳549.00</p>
+
+                    <button onclick="orderNow('Essential Black T-Shirt')">
+                        ORDER NOW
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <p>ABOUT LIFEWEAR</p>
+
+        <h2>Simple. Premium. You.</h2>
+
+        <p>
+            LifeWear brings modern and comfortable clothing
+            designed for everyday lifestyle.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <h2>LIFEWEAR</h2>
+
+        <p>Wear Your Lifestyle 👕</p>
+
+        <p>© 2026 LifeWear. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- ORDER POPUP -->
+    <div id="orderPopup" class="popup">
+
+        <div class="popup-box">
+
+            <span class="close" onclick="closePopup()">×</span>
+
+            <h2>ORDER NOW</h2>
+
+            <p id="selectedProduct"></p>
+
+            <input type="text" id="name" placeholder="Your Name">
+
+            <input type="text" id="phone" placeholder="Phone Number">
+
+            <select id="size">
+
+                <option value="">Select Size</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+
+            </select>
+
+            <textarea id="address"
+                placeholder="Delivery Address"></textarea>
+
+            <button onclick="sendOrder()">
+                ORDER VIA WHATSAPP
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
