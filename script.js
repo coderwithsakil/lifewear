@@ -1,13 +1,5 @@
 let selectedProduct = "";
 
-// SHOP NOW
-function scrollToShop() {
-    document.getElementById("shop").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-// ORDER NOW
 function orderNow(productName) {
 
     selectedProduct = productName;
@@ -18,12 +10,11 @@ function orderNow(productName) {
     document.getElementById("orderPopup").style.display = "flex";
 }
 
-// CLOSE POPUP
 function closePopup() {
+
     document.getElementById("orderPopup").style.display = "none";
 }
 
-// SEND ORDER
 function sendOrder() {
 
     let name = document.getElementById("name").value;
@@ -39,7 +30,7 @@ function sendOrder() {
     let message =
         "Hello LifeWear!\n\n" +
         "Product: " + selectedProduct + "\n" +
-        "Price: ৳499\n" +
+        "Price: 499 BDT\n" +
         "Name: " + name + "\n" +
         "Phone: " + phone + "\n" +
         "Size: " + size + "\n" +
@@ -53,5 +44,5 @@ function sendOrder() {
         "?text=" +
         encodeURIComponent(message);
 
-    window.open(whatsappURL, "_blank");
+    window.location.href = whatsappURL;
 }
