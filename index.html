@@ -8,47 +8,73 @@
     <title>LifeWear | Premium T-Shirts</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <!-- NAVBAR -->
+<nav class="navbar">
 
-        <div class="logo">
-            LIFEWEAR
+    <div class="logo">
+        <img src="images/logo.png" alt="LifeWear Logo">
+    </div>
+
+    <div class="menu">
+        <a href="#shop">Services</a>
+        <a href="#collection">Offers</a>
+        <a href="#career">Career</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Help</a>
+        <a href="#islamic">LifeWear</a>
+    </div>
+
+    <div class="nav-right">
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
         </div>
 
-        <div class="menu">
-            <a href="#shop">SHOP</a>
-            <a href="#collection">COLLECTIONS</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+        <div class="language">
+            <span class="active">English</span>
+            <span>বাংলা</span>
         </div>
 
-        <div class="icons">
-            🛒
-        </div>
+    </div>
 
-    </nav>
+</nav>
 
 
     <!-- HERO -->
-    <section class="hero">
+    <!-- HERO -->
+<section class="hero">
 
-        <div class="hero-text">
+    <div class="hero-overlay"></div>
 
-            <p>NEW COLLECTION</p>
+    <div class="hero-text">
 
-            <h1>WEAR YOUR<br>LIFESTYLE</h1>
+        <p class="hero-small">WELCOME TO LIFEWEAR</p>
 
-            <button onclick="scrollToShop()">
-                SHOP NOW
-            </button>
+        <h1>LIFE<span>WEAR</span></h1>
 
-        </div>
+        <p class="hero-tagline">
+            Wear Your Lifestyle 👕
+        </p>
 
-    </section>
+        <p class="hero-description">
+            Premium T-Shirts for Everyday Style
+        </p>
+
+        <button onclick="scrollToShop()">
+            SHOP NOW
+        </button>
+
+    </div>
+
+</section>
 
 
     <!-- SHOP -->
@@ -65,7 +91,7 @@
             <div class="product">
 
                 <div class="product-image">
-                    <img src="Allan walker.png"
+                    <img src="images/allan full.png"
                          alt="Classic Black T-Shirt">
                 </div>
 
@@ -88,7 +114,7 @@
             <div class="product">
 
                 <div class="product-image">
-                    <img src="Allan walker.png"
+                    <img src="images/allan lal.png"
                          alt="Clean White T-Shirt">
                 </div>
 
@@ -111,7 +137,7 @@
             <div class="product">
 
                 <div class="product-image">
-                    <img src="Allan walker.png"
+                    <img src="images/allan black.png"
                          alt="LifeWear Premium T-Shirt">
                 </div>
 
@@ -121,9 +147,10 @@
 
                     <p>৳599.00</p>
 
-                    <button onclick="orderNow('LifeWear Premium T-Shirt')">
-                        ORDER NOW
-                    </button>
+                   <button onclick="orderNow('LifeWear Premium T-Shirt')">
+    ORDER NOW
+
+</button>
 
                 </div>
 
@@ -134,7 +161,7 @@
             <div class="product">
 
                 <div class="product-image">
-                    <img src="Allan walker.png"
+                    <img src="images/Allan walker.png"
                          alt="Essential Black T-Shirt">
                 </div>
 
@@ -175,13 +202,40 @@
     <!-- FOOTER -->
     <footer id="contact">
 
-        <h2>LIFEWEAR</h2>
+    <div class="social-icons">
 
-        <p>Wear Your Lifestyle 👕</p>
+        <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
 
-        <p>© 2026 LifeWear. All Rights Reserved.</p>
+        <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
 
-    </footer>
+        <a href="#" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="#" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Be a Merchant </a>
+    </div>
+
+    <p>LifeWear © 2026 — Created by Sohag Babu Shakil</p>
+
+</footer>
 
 
     <!-- ORDER POPUP -->
@@ -221,7 +275,58 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script>
+
+function scrollToShop() {
+    document.getElementById("shop").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function orderNow(productName) {
+
+    document.getElementById("selectedProduct").innerText =
+        "Product: " + productName;
+
+    document.getElementById("orderPopup").style.display = "flex";
+}
+
+function closePopup() {
+
+    document.getElementById("orderPopup").style.display = "none";
+}
+
+function sendOrder() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let size = document.getElementById("size").value;
+    let address = document.getElementById("address").value;
+
+    if (name === "" || phone === "" || size === "" || address === "") {
+        alert("Please fill all information!");
+        return;
+    }
+
+    let message =
+        "Hello LifeWear!%0A%0A" +
+        "Product: " + encodeURIComponent(
+            document.getElementById("selectedProduct").innerText
+        ) + "%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Size: " + encodeURIComponent(size) + "%0A" +
+        "Address: " + encodeURIComponent(address);
+
+    let whatsappNumber = "8801733697137";
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + message,
+        "_blank"
+    );
+}
+
+</script>
 
 </body>
 
